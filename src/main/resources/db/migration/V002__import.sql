@@ -17,5 +17,5 @@ INSERT INTO `tb_participante_atividade` VALUE (1, 1);
 INSERT INTO `tb_participante_atividade` VALUE (1, 2);
 INSERT INTO `tb_participante_atividade` VALUE (2, 1);
 INSERT INTO `tb_participante_atividade` VALUE (3, 1);
-INSERT INTO `tb_participante_atividade` VALUE (3, 1);
+INSERT INTO `tb_participante_atividade` VALUE (3, 2);
 INSERT INTO `tb_participante_atividade` VALUE (4, 2);

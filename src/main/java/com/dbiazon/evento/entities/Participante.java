@@ -1,8 +1,8 @@
 package com.dbiazon.evento.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -40,5 +40,5 @@ public class Participante implements Serializable {
 
 	@ManyToMany
 	@JoinTable(name = "tb_participante_atividade", joinColumns = @JoinColumn(name = "participante_id"), inverseJoinColumns = @JoinColumn(name = "atividade_id"))
-	private List<Atividade> atividades = new ArrayList<>();
+	private Set<Atividade> atividades = new HashSet<>();
 }

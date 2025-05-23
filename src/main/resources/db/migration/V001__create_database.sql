@@ -9,7 +9,7 @@
  Target Server Version : 90100
  File Encoding         : 65001
 
- Date: 22/05/2025 17:28:33
+ Date: 23/05/2025 09:47:16
 */
 
 SET NAMES utf8mb4;
@@ -92,8 +92,8 @@ DROP TABLE IF EXISTS `tb_participante_atividade`;
 CREATE TABLE `tb_participante_atividade`  (
   `participante_id` bigint(0) NOT NULL,
   `atividade_id` bigint(0) NOT NULL,
+  PRIMARY KEY (`participante_id`, `atividade_id`) USING BTREE,
   INDEX `FK9b071l1v499imcinny8sadood`(`atividade_id`) USING BTREE,
-  INDEX `FKl3i4516bk5uowupdqqnp69xq4`(`participante_id`) USING BTREE,
   CONSTRAINT `FK9b071l1v499imcinny8sadood` FOREIGN KEY (`atividade_id`) REFERENCES `tb_atividade` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKl3i4516bk5uowupdqqnp69xq4` FOREIGN KEY (`participante_id`) REFERENCES `tb_participante` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;

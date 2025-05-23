@@ -1,9 +1,7 @@
 package com.dbiazon.evento.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import jakarta.persistence.Column;
@@ -44,7 +42,7 @@ public class Atividade implements Serializable {
 	private Double preco;
 		
 	@ManyToMany(mappedBy = "atividades")
-	private List<Participante> participantes = new ArrayList<>();
+	private Set<Participante> participantes = new HashSet<>();
 	
 	@ManyToOne
 	@JoinColumn(name = "categoria_id")
